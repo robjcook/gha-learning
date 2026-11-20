@@ -9,7 +9,8 @@
   },
   "scripts": {
     "start": "node src/server.js",
-    "test": "node --test"
+    "test": "node --test",
+    "lint": "node --check src/*.js test/*.js && echo 'syntax OK'"
   },
   "license": "MIT"
 }
