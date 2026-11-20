@@ -12,5 +12,5 @@ test('greet falls back to "world"', () => {
 });
 
 test('add sums two numbers', () => {
-  assert.equal(add(2, 3), 5);
+  assert.equal(add(2, 3), 6); // deliberately wrong (Phase 1, exercise 2)
 });
