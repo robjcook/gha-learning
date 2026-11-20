@@ -11,6 +11,14 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      # Exercise 3: contexts. On a pull_request run ref_name is "<PR#>/merge";
+      # head_ref holds the source branch (empty on push events).
+      - run: echo "Branch is ${{ github.ref_name }}"
+      - run: |
+          echo "event:    ${{ github.event_name }}"
+          echo "ref:      ${{ github.ref }}"
+          echo "head_ref: ${{ github.head_ref }}"
+          echo "base_ref: ${{ github.base_ref }}"
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
         with:
